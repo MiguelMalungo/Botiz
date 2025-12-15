@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { createWidget, deleteWidget, getWidgets } from "@/lib/storage";
 import { WidgetConfig } from "@/types/widget";
 import { MessageSquare, Plus, Settings, Trash2, ExternalLink } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -44,8 +45,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 h-full">
           <div className="flex items-center justify-between h-full">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-glow">
-                <MessageSquare className="w-7 h-7 text-background-app" />
+              <div className="w-12 h-12 rounded-lg overflow-hidden shadow-glow">
+                <Image
+                  src="/img/botiz_s.png"
+                  alt="BOTiZ Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h1 className="font-bold text-2xl text-text-primary">BOTiZ</h1>

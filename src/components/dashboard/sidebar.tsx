@@ -10,6 +10,7 @@ import {
   Database,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navigation = [
   { name: "AI Config", href: "/widget", icon: Settings, section: "config" },
@@ -30,8 +31,14 @@ export function Sidebar({ activeSection = "config", onSectionChange }: SidebarPr
       {/* Logo */}
       <div className="p-6 border-b border-border-subtle">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center shadow-glow group-hover:shadow-glow-strong transition-all">
-            <MessageSquare className="w-6 h-6 text-background-app" />
+          <div className="w-10 h-10 rounded-lg overflow-hidden shadow-glow group-hover:shadow-glow-strong transition-all">
+            <Image
+              src="/img/botiz_s.png"
+              alt="BOTiZ Logo"
+              width={40}
+              height={40}
+              className="w-full h-full object-cover"
+            />
           </div>
           <div>
             <h1 className="font-bold text-lg text-text-primary">BOTiZ</h1>
